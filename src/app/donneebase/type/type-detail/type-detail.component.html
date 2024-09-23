@@ -1,0 +1,28 @@
+<!-- <div class="title"><button class="btn-2">Nouveau</button> </div> -->
+<div class="form-container">
+    <div class="container">
+        <form [formGroup]="typeForm" (ngSubmit)="onSubmit()">
+            <div class="form-row">
+                <div class="input-data">
+                    <input type="text" id="nom" formControlName="nom">
+                    <div class="underline"></div>
+                    <label for="">Nom</label>
+                    <div *ngIf="typeForm.get('nom')!.invalid && typeForm.get('nom')!.touched">
+                        Le nom est requis
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="input-data textarea">
+                    <textarea rows="8" cols="80" id="description" formControlName="description"></textarea>
+                    <br />
+                    <div class="underline"></div>
+                    <label for="">Description</label>
+                </div>
+            </div>
+            <div class="button-container">
+                <button class="btn-1" type="submit" [disabled]="typeForm.invalid">Enregister</button>
+            </div>
+        </form>
+    </div>
+</div>

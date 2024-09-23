@@ -1,0 +1,40 @@
+.doneebase-container {
+    display: flex;
+    height: 100%;
+}
+
+.doneebase-menu {
+}
+
+.doneebase-content{
+    flex: 1;
+} 
+
+
+
+/* 
+.container {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
+
+.sidebar {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+    width: 300px;
+}
+
+.content {
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(140, 117, 240);
+} */

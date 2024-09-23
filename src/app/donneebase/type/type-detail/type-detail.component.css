@@ -1,0 +1,209 @@
+.form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    padding: 40px;
+    background: var(--hover-color); 
+  }
+
+.container{
+    max-width: 800px;
+    background: var(--secondary-color);
+    width: 800px;
+    padding: 25px 40px 10px 40px;
+    /* box-shadow: 0px 0px 10px rgba(0,0,0,0.1); */
+  }
+
+  .container form{
+    padding: 30px 0 0 0;
+  }
+  .container form .form-row{
+    display: flex;
+    margin: 32px 0;
+  }
+  form .form-row .input-data{
+    width: 100%;
+    height: 40px;
+    margin: 0 20px;
+    position: relative;
+  }
+  form .form-row .textarea{
+    height: 70px;
+  }
+  .input-data input,
+  .textarea textarea{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-size: 18px;
+    border-bottom: 3px solid rgba(0,0,0, 0.12);
+    background-color:var(--secondary-color);
+    color: var(--text-color-second);
+  }
+  .input-data input:focus ~ label, .textarea textarea:focus ~ label,
+  .input-data input:valid ~ label, .textarea textarea:valid ~ label{
+    transform: translateY(-20px);
+    font-size: 14px;
+    color: var(--text-color);
+  }
+  .textarea textarea{
+    resize: none;
+    padding-top: 10px;
+  }
+  .input-data label{
+    position: absolute;
+    pointer-events: none;
+    bottom: 10px;
+    font-size: 16px;
+    color: var(--text-color);
+    transition: all 0.3s ease;
+  }
+  .textarea label{
+    width: 100%;
+    bottom: 40px;
+    background: var(--secondary-color);
+  }
+  .input-data .underline{
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background: var(--primary-color);
+  }
+  .input-data .underline:before{
+    position: absolute;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background: var(--text-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+  }
+  .input-data input:focus ~ .underline:before,
+  .input-data input:valid ~ .underline:before,
+  .textarea textarea:focus ~ .underline:before,
+  .textarea textarea:valid ~ .underline:before{
+    transform: scale(1);
+  }
+  .submit-btn .input-data{
+    overflow: hidden;
+    height: 45px!important;
+    width: 25%!important;
+  }
+  .submit-btn .input-data .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    /* background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea); */
+    transition: all 0.4s;
+  }
+  .submit-btn .input-data:hover .inner{
+    left: 0;
+  }
+  .submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+
+
+
+
+  button{
+    position: relative;
+    height: 2.5rem;
+    width: 10rem;
+    margin: 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    background: var(--secondary-color);
+    overflow: hidden;
+    transition: 0.6s;
+  }
+  .btn-1{
+    color: #9ef01a;
+    border-color: #9ef01a;
+  }
+
+  .btn-2{
+    color: #ffb703;
+    border-color: #ffb703;
+  }
+
+  .btn-3{
+    color: #f94144;
+    border-color: #f94144;
+  }
+  button:before, button:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    filter: blur(30px);
+    opacity: 0.4;
+    transition: 0.6s;
+  }
+  button:before{
+    width: 60px;
+    background: rgba(255,255,255,0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  button:after{
+    width: 30px;
+    background: rgba(255,255,255,0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  button:hover:before,
+  button:hover:after{
+    opacity: 0.6;
+    transform: translateX(320px) skewX(-45deg);
+  }
+  button:hover{
+    color: var(--text-color);
+  }
+ 
+
+  .btn-1:hover{
+    background: #006400;
+  }
+
+  .btn-2:hover{
+    background: #c44536;
+  }
+  .btn-3:hover{
+    background: #d90429;
+  }
+
+
+  .title {
+    padding: 1.2rem;
+    background: var(--secondary-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border: 1px solid  var(--body-color);
+  }

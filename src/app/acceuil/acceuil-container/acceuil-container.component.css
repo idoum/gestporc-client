@@ -1,0 +1,13 @@
+.acceuil-container-contener {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem   ;
+   
+}
+
+.centered-element{
+    display: inline-block;
+    padding: 1rem 20rem
+}

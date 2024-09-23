@@ -1,0 +1,40 @@
+<div class="principal">
+    <div  class="search-box">
+        <button class="btn-search"><i class="fas fa-search"></i></button>
+        <input  class="input-search" type="text" placeholder="Recherche..." (input)="onSearchChange($event.target.value)" />
+    </div>
+    <div>
+        <table id="customers">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let type of types">
+                    <td>{{ type.nom }}</td>
+                    <td>{{ type.description }}</td>
+                    <td class="btn-list">
+                        <button class="btn-1" (click)="openEditModal(type)">Modifier</button>
+                        <button class="btn-3" (click)="deleteType(type.id)">Supprimer</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="pagination">
+        <button (click)="changePage(currentPage - 1)" [disabled]="currentPage === 1">Précédent</button>
+        <span>Page {{ currentPage }} sur {{ totalPages }}</span>
+        <button (click)="changePage(currentPage + 1)" [disabled]="currentPage === totalPages">Suivant</button>
+    </div>
+
+    <app-type-edit-modal [isVisible]="isEditModalVisible" [type]="selectedType" (update)="updateType($event)"
+        (close)="isEditModalVisible = false">
+
+    </app-type-edit-modal>
+
+</div>

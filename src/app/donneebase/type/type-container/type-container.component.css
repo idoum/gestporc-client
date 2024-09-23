@@ -1,0 +1,12 @@
+.type-container {
+    display: flex;
+    height: 100%;
+}
+
+.type-list{
+    width: 50%;
+}
+
+.type-detail{
+    width: 50%;
+}

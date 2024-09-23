@@ -1,0 +1,21 @@
+.container-main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+footer {
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+header {
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.content-main {
+    flex: 1;
+}

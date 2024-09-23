@@ -1,0 +1,210 @@
+.principal {
+    padding: 1rem;
+    background: var(--secondary-color);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+align-items: center;    
+}
+
+#customers {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+  
+#customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: var(--text-color);
+}
+
+#customers td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  color: var(--text-color);
+  
+}
+  
+#customers tr:nth-child(even){
+    background-color: var(--secondary-color);
+}
+  
+#customers tr:hover {
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+  
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--primary-color);
+    
+}
+
+.btn-list {
+  text-align: center; 
+}
+
+  
+.submit-btn .input-data .inner{
+    height: 100%;
+    width: 300%;
+    position: absolute;
+    left: -100%;
+    /* background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea); */
+    transition: all 0.4s;
+  }
+  .submit-btn .input-data:hover .inner{
+    left: 0;
+  }
+  .submit-btn .input-data input{
+    background: none;
+    border: none;
+    color: var(--text-color);
+    font-size: 17px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+  }
+
+  button{
+    position: relative;
+    margin: 1px;
+    /* height: 2.5rem; */
+    width: 5rem;
+    /* margin: 0 1px; */
+    /* font-size: 1rem; */
+    /* font-weight: 700; */
+    /* letter-spacing: 2px; */
+    border-radius: 0.3rem;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    outline: none;
+    cursor: pointer;
+    background: var(--secondary-color);
+    overflow: hidden;
+    transition: 0.6s;
+  }
+  .btn-1{
+    color: #8ecae6;
+    border-color: #8ecae6;
+  }
+
+  .btn-2{
+    color: #ffb703;
+    border-color: #ffb703;
+  }
+
+  .btn-3{
+    color: #f94144;
+    border-color: #f94144;
+  }
+  button:before, button:after{
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    filter: blur(30px);
+    opacity: 0.4;
+    transition: 0.6s;
+  }
+  button:before{
+    width: 60px;
+    background: rgba(255,255,255,0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  button:after{
+    width: 30px;
+    background: rgba(255,255,255,0.6);
+    transform: translateX(-130px) skewX(-45deg);
+  }
+  button:hover:before,
+  button:hover:after{
+    opacity: 0.6;
+    transform: translateX(320px) skewX(-45deg);
+  }
+  button:hover{
+    color: var(--text-color);
+  }
+ 
+
+  .btn-1:hover{
+    background: #219ebc;
+  }
+
+  .btn-2:hover{
+    background: #c44536;
+  }
+  .btn-3:hover{
+    background: #d90429;
+  }
+
+  
+
+  .search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    padding-bottom: 7px;
+  }
+  .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color:  var(--primary-color);
+    padding-right: 40px;
+    color:var(--text-color);
+  }
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:#ffffff ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+
+  }
+  
+
+  

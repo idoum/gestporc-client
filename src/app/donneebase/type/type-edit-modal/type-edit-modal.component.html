@@ -1,0 +1,36 @@
+<div class="modal" [ngClass]="{'show': isVisible}" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <div class="modal-header ">
+      <h5 class="modal-title title">Modifier un type</h5>
+      <button type="button" class="close button-close" (click)="closeModal()">Fermer</button>
+    </div>
+    <div class="modal-body item">
+      <div class="container">
+        <form [formGroup]="editTypeForm" (ngSubmit)="onSubmit()">
+
+          <div class="form-row">
+            <div class="input-data">
+              <input type="text" id="nom" formControlName="nom">
+              <div class="underline"></div>
+              <label for="">Nom</label>
+              <div *ngIf="editTypeForm.get('nom')!.invalid && editTypeForm.get('nom')!.touched">
+                Le nom est requis
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="input-data textarea">
+              <textarea rows="8" cols="80" id="description" formControlName="description"></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">Description</label>
+            </div>
+          </div>
+          <div class="button-container">
+            <button class="btn-1 button-modal" type="submit" [disabled]="editTypeForm.invalid">Enregister</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
